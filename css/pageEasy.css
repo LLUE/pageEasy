@@ -1,0 +1,86 @@
+.pageWp{
+    margin-top: 10px;
+}
+.pageWp .page{
+    /* text-align: center; */
+    text-align: right;
+    padding: 0 10px;
+}
+
+.pageEasy, .pageEasy li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.pageEasy .page_item{
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 32px;
+    height: 32px;
+    line-height: 30px;
+    margin-right: 4px;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-family: Arial;
+    border: 1px solid #dddee1;
+    border-radius: 4px;
+    transition: border .2s ease-in-out,color .2s ease-in-out;
+}
+.pageEasy .page_item.page_on{
+    background-color: #1c6be2;
+    color: #fff;
+    border-color: #1c6be2;
+}
+.pageEasy .page_item:hover{
+    color: #1c6be2;
+    border-color: #1c6be2;
+}
+.pageEasy .page_item.page_on:hover{
+    color: #fff;
+}
+.pageEasy .page_item.page_disable{
+    cursor: not-allowed;
+    border-color: #eaeaea;
+}
+.pageEasy .page_item.page_disable a{
+    color: #aaa;
+}
+.pageEasy .page_item.page_disable:hover a{
+    color: #aaa;
+}
+.pageEasy .page_item a {
+    background-color: transparent;
+    transition: all .2s;
+    margin: 0 6px;
+    text-decoration: none;
+}
+.pageEasy .page_item:hover a {
+    color: #2d8cf0;
+}
+.pageEasy .page_item.page_on:hover a {
+    color: #fff;
+}
+.page_jumppre a,.page_jumpnext a{
+    display: none;
+}
+.page_jumppre:hover a,.page_jumpnext:hover a{
+    display: initial;
+}
+.page_jumppre::after,.page_jumpnext::after{
+    content: "\2022\2022\2022";
+    display: block;
+    letter-spacing: 1px;
+    color: #ccc;
+    text-align: center;
+}
+.page_jumppre:hover::after,.page_jumpnext:hover::after{
+    content: "";
+    display: none;
+}

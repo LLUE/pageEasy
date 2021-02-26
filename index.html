@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pageEasy.com</title>
+    <link rel='stylesheet' type='text/css' href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageEasy.css"/>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="seachItem">
+                <span>身份证：</span>
+                <input class="" type="text" name="" id="identity">
+            </div>
+            <div class="seachItem">
+                <span>网点：</span>
+                <input class="" type="text" name="" id="network">
+            </div>
+            <div class="seachItem">
+                <span>开始时间：</span>
+                <input class="" type="datetime-local" name="" id="startTime">
+            </div>
+            <div class="seachItem">
+                <span>结束时间：</span>
+                <input class="" type="datetime-local" value="" name="" id="endTime">
+            </div>
+            <div class="seachItem">
+                <button class="sbtn">查询</button>
+            </div>
+        </div>
+        <div class="main">
+            <table class="tab" id="tab">
+                <thead>
+                    <tr>
+                        <th width="20">序号</th>
+                        <th width="100">身份证</th>
+                        <th width="100">网点</th>
+                        <th width="100">请求时间</th>
+                        <th width="100">入参内容</th>
+                        <th width="100">返回时间</th>
+                        <th width="100">返回内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7"><div class="nodata">暂无数据</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagemore">
+                <label for="">每页显示</label>
+                <input type="text" value="10" class="size" id="size">
+                <span>条数据；</span>
+                <label for="">第</label>
+                <input type="text" class="pageCur" value="1" id="pageCur">
+                <span>页</span>
+                <a href="javascript:;" class="page pageBtn">跳转</a>
+                <a href="javascript:;" class="pagenext">下一页</a>
+                <a href="javascript:;" class="pagepres">上一页</a>
+            </div>
+            <div class="pageWp">
+                <div id="pageination" class="page" page="1" size="10"></div>
+            </div>
+            <div id="app">
+                <table @on="getclick" :cla="cla" class="tab" id="table" columns="columns" data="datas"></table>
+                <p>{{}}</p>
+            </div>
+            <div class="pageWp">
+                <div id="pageinations" class="page" page="1" size="15"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/pageEasy.JQ.js"></script>
+    <script src="./js/pageEasy.js"></script>
+    <script src="./js/tableEasy.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
