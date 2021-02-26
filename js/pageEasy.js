@@ -8,7 +8,7 @@ class pageEasy{
         this.$options = ops
         this.$event   = ops.event
         this.$data    = ops.data
-        this.render(document.querySelector(ops.el),ops)
+        // this.render(document.querySelector(ops.el),ops)
         this.observe(ops)
     }
 
@@ -46,7 +46,7 @@ class pageEasy{
             },
             set(newVal){
                 if(newVal !== val){
-                    // console.log(`我将 ${key} 的值 ${val} 改为了 ${newVal}`);
+                    console.log(`我将 ${key} 的值 ${val} 改为了 ${newVal}`);
                     val = newVal;
                     $this.render(document.querySelector(obj.el),obj);
                 }
